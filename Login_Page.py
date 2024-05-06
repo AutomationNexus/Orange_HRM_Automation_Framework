@@ -57,6 +57,7 @@ driver.find_element(By.ID, "address").send_keys("E-47/A, Q Block, Nayantra Road,
 driver.find_element(By.ID, "notes").click()
 driver.find_element(By.ID, "notes").clear()
 driver.find_element(By.ID, "notes").send_keys("This is communication address.")
+'''
 driver.find_element(By.XPATH, '//*[@id="countryCode_inputfileddiv"]/div/input').click()
 
 time.sleep(3)
@@ -65,7 +66,21 @@ for i in range(len(countries)):
     print(countries[i].text)
     if countries[i].text == "Algeria":
         driver.execute_script(countries[i])
+'''
 
 
+driver.find_element(By.XPATH, '//*[@id="countryCode_inputfileddiv"]/div/input').click()
+time.sleep(5)
+driver.find_element(By.XPATH,"//li[100]//span[contains(text(),'India')][1]").click()
+time.sleep(3)
+driver.find_element(By.XPATH, '//*[@id="time_zone_inputfileddiv"]/div/input').click()
+time.sleep(5)
+driver.find_element(By.XPATH,'//li[384]//span[contains(text(),"(GMT+05:30) India Standard Time - Kolkata")]').click()
+time.sleep(3)
+driver.find_element(By.XPATH,"//a[@form-name='locationsModalForm' and contains(text(),'Save')]").click()
+time.sleep(5)
+driver.find_element(By.XPATH,'//*[@id="top_level_menu_item_menu_item_109"]/a').click()
+time.sleep(10)
+driver.quit()
 time.sleep(10)
 driver.quit()
