@@ -26,9 +26,11 @@ driver.find_element(By.ID, "rememberMe").click()
 driver.find_element(By.XPATH, "//button[@type='submit']").click()
 time.sleep(5)
 driver.find_element(By.XPATH, "//li[@id='left_menu_item_10']//a[1]//span[1]").click()
-time.sleep(3)
+time.sleep(5)
+
 driver.find_element(By.XPATH, '//*[@id="top_level_menu_item_menu_item_108"]/a').click()
 time.sleep(10)
+'''
 driver.find_element(By.XPATH, "//a[normalize-space()='Locations']").click()
 time.sleep(3)
 driver.find_element(By.XPATH, '//*[@id="locationDiv"]/div/a/i').click()
@@ -58,6 +60,8 @@ driver.find_element(By.ID, "notes").click()
 driver.find_element(By.ID, "notes").clear()
 driver.find_element(By.ID, "notes").send_keys("This is communication address.")
 '''
+# below loop content needs to be skipped
+'''
 driver.find_element(By.XPATH, '//*[@id="countryCode_inputfileddiv"]/div/input').click()
 
 time.sleep(3)
@@ -68,7 +72,7 @@ for i in range(len(countries)):
         driver.execute_script(countries[i])
 '''
 
-
+'''
 driver.find_element(By.XPATH, '//*[@id="countryCode_inputfileddiv"]/div/input').click()
 time.sleep(5)
 driver.find_element(By.XPATH,"//li[100]//span[contains(text(),'India')][1]").click()
@@ -83,4 +87,66 @@ driver.find_element(By.XPATH,'//*[@id="top_level_menu_item_menu_item_109"]/a').c
 time.sleep(10)
 driver.quit()
 time.sleep(10)
+'''
+driver.find_element(By.XPATH,'//*[@id="top_level_menu_item_menu_item_108"]/sub-menu-container/div/div[1]/a').click()
+driver.find_element(By.XPATH,'//*[@id="top_level_menu_item_menu_item_109"]/a').click()
+time.sleep(5)
+driver.find_element(By.XPATH,'//*[@id="name"]').click()
+driver.find_element(By.XPATH,'//*[@id="name"]').clear()
+driver.find_element(By.XPATH,'//*[@id="name"]').send_keys("My Own Organization")
+
+driver.find_element(By.XPATH,'//*[@id="taxId"]').click()
+driver.find_element(By.XPATH,'//*[@id="taxId"]').clear()
+driver.find_element(By.XPATH,'//*[@id="taxId"]').send_keys("123456")
+
+driver.find_element(By.XPATH,'//*[@id="registraionNumber"]').click()
+driver.find_element(By.XPATH,'//*[@id="registraionNumber"]').clear()
+driver.find_element(By.XPATH,'//*[@id="registraionNumber"]').send_keys("789765")
+
+driver.find_element(By.XPATH,'//*[@id="phone"]').click()
+driver.find_element(By.XPATH,'//*[@id="phone"]').clear()
+driver.find_element(By.XPATH,'//*[@id="phone"]').send_keys("123456")
+
+driver.find_element(By.XPATH,'//*[@id="fax"]').click()
+driver.find_element(By.XPATH,'//*[@id="fax"]').clear()
+driver.find_element(By.XPATH,'//*[@id="fax"]').send_keys("123456")
+
+driver.find_element(By.XPATH,'//*[@id="email"]').click()
+driver.find_element(By.XPATH,'//*[@id="email"]').clear()
+driver.find_element(By.XPATH,'//*[@id="email"]').send_keys("abc@xyz.com")
+
+driver.find_element(By.XPATH,'//*[@id="street1"]').click()
+driver.find_element(By.XPATH,'//*[@id="street1"]').clear()
+driver.find_element(By.XPATH,'//*[@id="street1"]').send_keys("Palam Vihar")
+
+driver.find_element(By.XPATH,'//*[@id="street2"]').click()
+driver.find_element(By.XPATH,'//*[@id="street2"]').clear()
+driver.find_element(By.XPATH,'//*[@id="street2"]').send_keys("Sector 23A")
+
+driver.find_element(By.XPATH,'//*[@id="city"]').click()
+driver.find_element(By.XPATH,'//*[@id="city"]').clear()
+driver.find_element(By.XPATH,'//*[@id="city"]').send_keys("Gurgaon")
+
+driver.find_element(By.XPATH,'//*[@id="province"]').click()
+driver.find_element(By.XPATH,'//*[@id="province"]').clear()
+driver.find_element(By.XPATH,'//*[@id="province"]').send_keys("Haryana")
+
+driver.find_element(By.XPATH,'//*[@id="zipCode"]').click()
+driver.find_element(By.XPATH,'//*[@id="zipCode"]').clear()
+driver.find_element(By.XPATH,'//*[@id="zipCode"]').send_keys("98765")
+
+driver.find_element(By.XPATH, '//*[@id="country_inputfileddiv"]/div/input').click()
+time.sleep(5)
+time.sleep(5)
+driver.find_element(By.XPATH,"//li[100]//span[contains(text(),'India')][1]").click()
+#select = Select(driver.find_element(By.ID,'country'))
+#select.select_by_index(100)
+time.sleep(3)
+driver.find_element(By.XPATH,'//*[@id="note"]').click()
+driver.find_element(By.XPATH,'//*[@id="note"]').clear()
+driver.find_element(By.XPATH,'//*[@id="note"]').send_keys("This is sample note.")
+time.sleep(2)
+driver.find_element(By.XPATH,'//*[@id="organizationGeneralInformationDiv"]/form/materializecss-decorator[4]/div/sf-decorator/div/button').click()
+time.sleep(10)
+
 driver.quit()
