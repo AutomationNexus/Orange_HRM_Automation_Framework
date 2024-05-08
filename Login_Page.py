@@ -88,6 +88,8 @@ time.sleep(10)
 driver.quit()
 time.sleep(10)
 '''
+# code for general information page
+'''
 driver.find_element(By.XPATH,'//*[@id="top_level_menu_item_menu_item_108"]/sub-menu-container/div/div[1]/a').click()
 driver.find_element(By.XPATH,'//*[@id="top_level_menu_item_menu_item_109"]/a').click()
 time.sleep(5)
@@ -139,8 +141,7 @@ driver.find_element(By.XPATH, '//*[@id="country_inputfileddiv"]/div/input').clic
 time.sleep(5)
 time.sleep(5)
 driver.find_element(By.XPATH,"//li[100]//span[contains(text(),'India')][1]").click()
-#select = Select(driver.find_element(By.ID,'country'))
-#select.select_by_index(100)
+
 time.sleep(3)
 driver.find_element(By.XPATH,'//*[@id="note"]').click()
 driver.find_element(By.XPATH,'//*[@id="note"]').clear()
@@ -148,5 +149,29 @@ driver.find_element(By.XPATH,'//*[@id="note"]').send_keys("This is sample note."
 time.sleep(2)
 driver.find_element(By.XPATH,'//*[@id="organizationGeneralInformationDiv"]/form/materializecss-decorator[4]/div/sf-decorator/div/button').click()
 time.sleep(10)
+'''
+driver.find_element(By.ID,"menu_item_128").click()
+time.sleep(5)
+driver.find_element(By.ID,"addEmployeeButton").click()
+time.sleep(3)
+driver.find_element(By.ID,"first-name-box").click()
+driver.find_element(By.ID,"first-name-box").clear()
+driver.find_element(By.ID,"first-name-box").send_keys("Abc")
 
+driver.find_element(By.ID,"middle-name-box").click()
+driver.find_element(By.ID,"middle-name-box").clear()
+driver.find_element(By.ID,"middle-name-box").send_keys("PQR")
+
+driver.find_element(By.ID,"middle-name-box").click()
+driver.find_element(By.ID,"middle-name-box").clear()
+driver.find_element(By.ID,"middle-name-box").send_keys("XYZ")
+
+driver.find_element(By.ID,"joinedDate").click()
+driver.find_element(By.ID,"joinedDate").clear()
+driver.find_element(By.ID,"joinedDate").send_keys("2024-05-02")
+
+driver.find_element(By.XPATH,'//*[@id="modal-holder"]/div/div/div/div[2]/form/oxd-decorator/div/div[2]/div/div[3]/div/div[3]/div/div[1]/button/div/div/div').click()
+
+driver.find_element(By.XPATH,'//*[@id="bs-select-3"]/ul/li[3]').click()
+time.sleep(10)
 driver.quit()
