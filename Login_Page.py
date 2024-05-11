@@ -25,11 +25,11 @@ time.sleep(1)
 driver.find_element(By.ID, "rememberMe").click()
 driver.find_element(By.XPATH, "//button[@type='submit']").click()
 time.sleep(5)
-driver.find_element(By.XPATH, "//li[@id='left_menu_item_10']//a[1]//span[1]").click()
-time.sleep(5)
+#driver.find_element(By.XPATH, "//li[@id='left_menu_item_10']//a[1]//span[1]").click()
+#time.sleep(5)
 
-driver.find_element(By.XPATH, '//*[@id="top_level_menu_item_menu_item_108"]/a').click()
-time.sleep(10)
+#driver.find_element(By.XPATH, '//*[@id="top_level_menu_item_menu_item_108"]/a').click()
+#time.sleep(10)
 '''
 driver.find_element(By.XPATH, "//a[normalize-space()='Locations']").click()
 time.sleep(3)
@@ -150,28 +150,66 @@ time.sleep(2)
 driver.find_element(By.XPATH,'//*[@id="organizationGeneralInformationDiv"]/form/materializecss-decorator[4]/div/sf-decorator/div/button').click()
 time.sleep(10)
 '''
-driver.find_element(By.ID,"menu_item_128").click()
+driver.find_element(By.ID, "menu_item_128").click()
 time.sleep(5)
-driver.find_element(By.ID,"addEmployeeButton").click()
+driver.find_element(By.ID, "addEmployeeButton").click()
+time.sleep(8)
+driver.find_element(By.ID, "first-name-box").click()
+driver.find_element(By.ID, "first-name-box").clear()
+driver.find_element(By.ID, "first-name-box").send_keys("Abc")
+
+driver.find_element(By.ID, "middle-name-box").click()
+driver.find_element(By.ID, "middle-name-box").clear()
+driver.find_element(By.ID, "middle-name-box").send_keys("PQR")
+
+driver.find_element(By.ID, "last-name-box").click()
+driver.find_element(By.ID, "last-name-box").clear()
+driver.find_element(By.ID, "last-name-box").send_keys("XYZ")
+
+driver.find_element(By.ID, "joinedDate").click()
+driver.find_element(By.ID, "joinedDate").clear()
+driver.find_element(By.ID, "joinedDate").send_keys("2024-05-02")
+
+driver.find_element(By.XPATH,
+                    '//*[@id="modal-holder"]/div/div/div/div[2]/form/oxd-decorator/div/div[2]/div/div[3]/div/div[3]/div/div[1]/button/div/div/div').click()
+
+# driver.find_elements(By.XPATH,'//*[@id="bs-select-3"]/ul/li[3]').click()
+a = driver.find_elements(By.ID, 'bs-select-1-2')
+for i in a:
+    if i.text == "Gurgaon":
+        i.click()
 time.sleep(3)
-driver.find_element(By.ID,"first-name-box").click()
-driver.find_element(By.ID,"first-name-box").clear()
-driver.find_element(By.ID,"first-name-box").send_keys("Abc")
+driver.find_element(By.XPATH, '//*[@id="modal-holder"]/div/div/div/div[2]/form/oxd-decorator/div/div[2]/div/div[5]/div/div/span/div[2]').click()
+time.sleep(5)
 
-driver.find_element(By.ID,"middle-name-box").click()
-driver.find_element(By.ID,"middle-name-box").clear()
-driver.find_element(By.ID,"middle-name-box").send_keys("PQR")
+driver.find_element(By.ID, "username").click()
+driver.find_element(By.ID, "username").clear()
+driver.find_element(By.ID, "username").send_keys("darkshadow2024")
 
-driver.find_element(By.ID,"middle-name-box").click()
-driver.find_element(By.ID,"middle-name-box").clear()
-driver.find_element(By.ID,"middle-name-box").send_keys("XYZ")
+time.sleep(3)
+driver.find_element(By.XPATH,"//label[contains(text(),'Disabled')]").click()
 
-driver.find_element(By.ID,"joinedDate").click()
-driver.find_element(By.ID,"joinedDate").clear()
-driver.find_element(By.ID,"joinedDate").send_keys("2024-05-02")
+driver.find_element(By.ID, "password").click()
+driver.find_element(By.ID, "password").clear()
+driver.find_element(By.ID, "password").send_keys("Studio@2023")
 
-driver.find_element(By.XPATH,'//*[@id="modal-holder"]/div/div/div/div[2]/form/oxd-decorator/div/div[2]/div/div[3]/div/div[3]/div/div[1]/button/div/div/div').click()
+driver.find_element(By.ID, "confirmPassword").click()
+driver.find_element(By.ID, "confirmPassword").clear()
+driver.find_element(By.ID, "confirmPassword").send_keys("Studio@2023")
 
-driver.find_element(By.XPATH,'//*[@id="bs-select-3"]/ul/li[3]').click()
-time.sleep(10)
+time.sleep(3)
+
+driver.find_element(By.XPATH,"//*[@id='modal-holder']/div/div/div/div[2]/form/oxd-decorator/div/div[2]/div/div[11]/div/div[1]/div/div[1]/button").click()
+
+driver.find_element(By.XPATH,'//*[@id="modal-holder"]/div/div/div/div[2]/form/oxd-decorator/div/div[2]/div/div[11]/div/div[2]/div/div[1]/button').click()
+
+driver.find_element(By.XPATH,"//*[@id='modal-holder']/div/div/div/div[2]/form/oxd-decorator/div/div[2]/div/div[11]/div/div[3]/div/div[1]/button").click()
+time.sleep(3)
+a = driver.find_elements(By.XPATH,'//*[@id="modal-holder"]/div/div/div/div[2]/form/oxd-decorator/div/div[2]/div/div[11]/div/div[3]/div/div[1]/div')
+time.sleep(3)
+driver.find_element(By.XPATH,"//li//a//span[contains(text(),'Global Admin')]").click()
+time.sleep(5)
+driver.find_element(By.XPATH,'//*[@id="modal-save-button"]').click()
+
+time.sleep(30)
 driver.quit()
