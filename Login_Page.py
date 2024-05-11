@@ -196,7 +196,7 @@ driver.find_element(By.ID, "password").send_keys("Studio@2023")
 driver.find_element(By.ID, "confirmPassword").click()
 driver.find_element(By.ID, "confirmPassword").clear()
 driver.find_element(By.ID, "confirmPassword").send_keys("Studio@2023")
-
+# time.sleep(5)
 time.sleep(3)
 
 driver.find_element(By.XPATH,"//*[@id='modal-holder']/div/div/div/div[2]/form/oxd-decorator/div/div[2]/div/div[11]/div/div[1]/div/div[1]/button").click()
