@@ -1,5 +1,7 @@
 from selenium.webdriver.common.by import By
 
+from pageObjects.Location import Location
+
 
 class Dashboard:
 
@@ -9,5 +11,7 @@ class Dashboard:
     employee_list = (By.LINK_TEXT,"Employee List")
 
     def employees_details(self):
-        return self.driver.find_element(*Dashboard.employee_list)
+        self.driver.find_element(*Dashboard.employee_list).click()
+        location = Location(self.driver)
+        return location
         # driver.find_element
