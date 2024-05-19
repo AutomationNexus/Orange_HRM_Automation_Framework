@@ -105,7 +105,7 @@ class Testone(BaseClass):
 
         general_information.add_employee().click()
         time.sleep(5)
-
+        general_information.add_name()
         general_information.add_name().click()
         general_information.add_name().clear()
         general_information.add_name().send_keys("My Own Organization")
