@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from pageObjects.EmployeeManagement import *
+from pageObjects.General_Information import *
 
 
 
@@ -7,7 +7,7 @@ class Location:
     # driver.find_element(By.XPATH, "//a[normalize-space()='Locations']")
 
     hr_dashboard = (By.LINK_TEXT, 'HR Administration')
-
+    general_information_homepage = (By.XPATH, '//*[@id="top_level_menu_item_menu_item_109"]/a')
     location_dropdown = (By.XPATH, '//*[@id="top_level_menu_item_menu_item_108"]/a')
     location_button = (By.XPATH, "//a[normalize-space()='Locations']")
     location_add = (By.XPATH, '//*[@id="locationDiv"]/div/a/i')
@@ -87,8 +87,11 @@ class Location:
         return self.driver.find_element(*Location.menu)
 
     def location_popup_close(self):
-        self.driver.find_element(*Location.location_cancel).click()
-        general_information = EmployeeManagement(self.driver)
+        return self.driver.find_element(*Location.location_cancel)
+
+    def general_information_home(self):
+        self.driver.find_element(*Location.general_information_homepage).click()
+        general_information = GeneralInformation(self.driver)
         return general_information
 
 
