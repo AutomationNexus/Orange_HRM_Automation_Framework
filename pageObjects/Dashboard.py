@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 from pageObjects.Location import Location
-
+# this is for dashboard
 
 class Dashboard:
 
