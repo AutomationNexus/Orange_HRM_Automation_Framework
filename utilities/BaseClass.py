@@ -19,7 +19,8 @@ class BaseClass:
         logger = logging.getLogger(loggerName)
 
 
-        filehandler = logging.FileHandler('/Users/ujjwalsingh/Python_Automation/OrangeHRM/utilities/logfile.log')
+        filehandler = logging.FileHandler('logfile.log')
+
 
         formatter = logging.Formatter("%(asctime)s :%(levelname)s :%(name)s :%(message)s")
 

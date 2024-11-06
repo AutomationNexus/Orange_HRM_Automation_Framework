@@ -35,9 +35,9 @@ def setup(request):
         driver = webdriver.Firefox(service=serv_obj)
 
     driver.maximize_window()
-    driver.get("https://darkshaodow-trials712.orangehrmlive.com/auth/login")
+    driver.get("https://ujjwalsingh560-trials714.orangehrmlive.com/")
     driver.find_element(By.ID, "txtUsername").send_keys("Admin")
-    driver.find_element(By.ID, "txtPassword").send_keys("@V4c7DvMwT")
+    driver.find_element(By.ID, "txtPassword").send_keys("@io61xXFJH")
 
     time.sleep(1)
     driver.find_element(By.ID, "rememberMe").click()
