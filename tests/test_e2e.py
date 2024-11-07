@@ -157,6 +157,7 @@ class Testone(BaseClass):
         general_information.add_country().click()
         self.time_5()
         logs.info("Selecting India as a country.")
+        #print(general_information.selectt())
         general_information.country_selectt().click()
 
         self.time_3()
